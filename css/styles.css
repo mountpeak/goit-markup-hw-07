@@ -64,9 +64,7 @@ textarea {
   padding-bottom: 120px;
 }
 .container {
-  width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
 
   padding-left: 15px;
   padding-right: 15px;
@@ -81,25 +79,183 @@ textarea {
 .adress {
   font-style: normal;
 }
-
-.active-menu::after {
-  position: absolute;
-  content: "";
-  display: block;
-
-  background-color: var(--accent-color);
-  width: 100%;
-  height: 4px;
-  bottom: -27px;
-  border-radius: 2px;
+.contact,
+.menu {
+  display: none;
 }
+.type-button-burger {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  height: 22px;
+}
+.modal-open-mobile-burger {
+  stroke: var(--background-color-navy);
+}
+/* ===========================mob=============================== */
+@media screen and (min-width: 428px) {
+  .container {
+    width: 426px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white);
+  padding: 80px 35px 40px 40px;
+}
+.modal-close-btn-mobile {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  padding: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--border);
+}
+.modal-close-btn-icon {
+}
+
+.mob-menu-nav {
+  margin-bottom: 284px;
+}
+.mob-menu :not(:last-child) {
+  margin-bottom: 40px;
+}
+.mob-menu-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: calc(40 / 36);
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  color: var(--background-color-navy);
+}
+.active-menu {
+}
+.link {
+}
+.mob-adress {
+  gap: 40px;
+}
+.mob-contact {
+}
+.mob-contact-list :first-child {
+  margin-bottom: 40px;
+}
+.mob-contact-link {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  color: var(--button-iris);
+}
+.mob-contact-link-mail {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.mob-team-icon-list {
+}
+.mob-icon-list-item {
+}
+.mob-team-icon-link {
+}
+.mob-link-icon {
+}
+/* ============================================================ */
+@media screen and (min-width: 768px) {
+  .page-header {
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--border);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
+      0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
+  }
+  .active-menu::after {
+    position: absolute;
+    content: "";
+    display: block;
+
+    background-color: var(--accent-color);
+    width: 100%;
+    height: 4px;
+    bottom: -27px;
+    border-radius: 2px;
+  }
+  .menu-item:not(:last-child) {
+    margin-right: 40px;
+  }
+  .menu {
+    display: flex;
+    align-items: center;
+    margin-left: 76px;
+  }
+  .contact {
+    display: flex;
+    align-items: center;
+  }
+  .menu-link {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--secondary-text-color);
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+  .menu-link.active-menu {
+    position: relative;
+    color: var(--accent-color);
+  }
+
+  .menu-link:hover,
+  .menu-link:focus {
+    color: var(--accent-color);
+  }
+
+  .contact-link {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    color: var(--primary-text-color);
+
+    transition-property: color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+  .contact-link:hover,
+  .contact-link:focus {
+    color: var(--accent-color);
+  }
+  .contact-list:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
 /* ======================================Header========================================== */
 .page-header {
   padding-top: 24px;
   padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
-  box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08),
-    0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
 }
 .page-header-container {
   display: flex;
@@ -109,37 +265,6 @@ textarea {
 .page-nav {
   display: flex;
   align-items: center;
-}
-
-.menu-item:not(:last-child) {
-  margin-right: 40px;
-}
-.menu {
-  display: flex;
-  align-items: center;
-  margin-left: 76px;
-}
-.contact {
-  display: flex;
-  align-items: center;
-}
-.contact-link {
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  cursor: pointer;
-  color: var(--primary-text-color);
-
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
-}
-.contact-link:hover,
-.contact-link:focus {
-  color: var(--accent-color);
-}
-.contact-list:not(:last-child) {
-  margin-right: 40px;
 }
 
 .secondary-title {
@@ -168,27 +293,6 @@ textarea {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--secondary-text-color);
-}
-
-.menu-link {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  letter-spacing: 0.02em;
-  color: var(--secondary-text-color);
-  transition-property: color;
-  transition-duration: var(--duration);
-  transition-timing-function: var(--timing-function);
-}
-.menu-link.active-menu {
-  position: relative;
-  color: var(--accent-color);
-}
-
-.menu-link:hover,
-.menu-link:focus {
-  color: var(--accent-color);
 }
 
 /* ======================================Hero========================================== */
