@@ -11,7 +11,6 @@
   --white: #ffffff;
 }
 
-
 /*=================== Обнуление стилей ======================*/
 h1,
 h2,
@@ -34,7 +33,6 @@ a {
   margin: 0;
 }
 
-
 /*================ Общие стили =================*/
 body {
   font-family: "Roboto", sans-serif;
@@ -50,6 +48,7 @@ span {
 }
 .section {
   padding-top: 96px;
+  padding-bottom: 96px;
 }
 img {
   display: block;
@@ -67,7 +66,7 @@ img {
 }
 @media screen and (min-width: 428px) {
   .container {
-    width: 426px;
+    width: 428px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -166,15 +165,15 @@ img {
   color: var(--button-hover-color);
 }
 @media screen and (min-width: 768px) {
+  .menu-container {
+    justify-content: space-between;
+  }
   .menu-items {
     display: flex;
   }
-  .menu-logo {
-    margin-right: 123px;
-  }
-  .menu-navigation {
-    margin-right: 118px;
-  }
+  .menu-contacts {
+    
+    margin-left: 0;}
   .menu-contact {
     margin: 0px 0px 4px 0px;
   }
@@ -187,13 +186,19 @@ img {
     line-height: 1.33;
   }
 }
-@media screen and (min-width: 768px), (min-width: 1200px) {
+@media screen and (min-width: 768px), (min-width: 1158px) {
   .menu-contacts {
     display: flex;
     flex-direction: column;
   }
 }
 @media screen and (min-width: 1158px) {
+  .menu-logo {
+    margin-right: 123px;
+  }
+  .menu-navigation {
+    margin-right: 118px;
+  }
   .menu-contacts {
     flex-direction: row;
   }
@@ -262,7 +267,6 @@ img {
   justify-content: flex-start;
 }
 .menu-btn[aria-expanded="true"] {
-  
   border: 1px solid rgba(0, 0, 0, 0.1);
   background-color: var(--border-collor);
   display: flex;
@@ -345,7 +349,7 @@ img {
   margin-top: 0px;
 }
 .menu-burger-tel {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
   color: var(--primery-band);
@@ -388,7 +392,6 @@ img {
   color: var(--button-hover-color);
 }
 
-
 @media screen and (min-width: 768px) {
   .menu-btn {
     display: none;
@@ -397,8 +400,6 @@ img {
 /*============ HERO ================== */
 .hero-section {
   padding: 112px 0px;
-  max-width: 1440px;
-  height: 600px;
   margin: 0 auto;
   background-color: var(--title-color);
   background-image: linear-gradient(
@@ -443,6 +444,7 @@ img {
 }
 @media screen and (min-width: 1158px) {
   .hero-section {
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -454,6 +456,7 @@ img {
   screen and (min-resolution: 192dpi) and (min-width: 1158px),
   screen and (min-resolution: 2dppx) and (min-width: 1158px) {
   .hero-section {
+    max-width: 1440px;
     background-image: linear-gradient(
         rgba(46, 47, 66, 0.7),
         rgba(46, 47, 66, 0.7)
@@ -516,7 +519,7 @@ img {
     padding: 188px 0px;
   }
   .hero-section {
-    height: 600px;
+    max-width: 1440px;
   }
 }
 /*==================== LIST ======================*/
@@ -770,7 +773,7 @@ img {
 }
 .customers-icons {
   height: 88px;
-  width: 168px;
+  width: 190px;
   border: 1px solid var(--subtle-color);
   border-radius: 4px;
 
@@ -800,6 +803,10 @@ img {
 @media screen and (min-width: 768px) {
   .customers-partner {
     column-gap: 24px;
+  }
+  .customers-icons {
+    height: 88px;
+    width: 168px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -1077,46 +1084,43 @@ img {
 }
 @media screen and (min-width: 768px) {
   .footer-container {
+    width: 552px;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: start;
     text-align: start;
-    align-items: flex-start;
+    align-items: start;
     flex-wrap: wrap;
   }
-  .footer-recommendation {
-    margin-right: 24px;
-  }
-  .footer-social {
-    width: 33%;
-  }
-  .form-all {
-    display: flex;
-  }
-  .form-input {
-    width: 264px;
-    margin-bottom: 0px;
-    margin-right: 24px;
-  }
-  .footer-recommendation {
-    align-items: start;
-  }
-  .footer-social {
-    align-items: start;
-  }
-  .footer-subscribe {
-    margin-left: -83px;
-  }
 }
+.footer-recommendation {
+  margin-right: 24px;
+}
+
+.form-all {
+  display: flex;
+}
+.form-input {
+  width: 264px;
+  margin-bottom: 0px;
+  margin-right: 24px;
+}
+.footer-recommendation {
+  align-items: start;
+}
+.footer-social {
+  align-items: start;
+}
+
 @media screen and (min-width: 1158px) {
   .footer-container {
     flex-wrap: nowrap;
+    justify-content: center;
   }
   .footer-section {
     padding: 100px 0px;
   }
   .footer-social {
-    width: 33%;
     margin-right: 80px;
     margin-bottom: 0px;
   }
