@@ -43,6 +43,7 @@ span {
   color: var(--primery-band);
 }
 .container {
+  min-width: 320px;
   margin: 0 auto;
   padding: 0px 15px;
 }
@@ -523,9 +524,7 @@ img {
   }
 }
 /*==================== LIST ======================*/
-.list-container {
-  padding-bottom: 96px;
-}
+
 .list-item {
   margin-bottom: 72px;
 }
@@ -1055,6 +1054,7 @@ img {
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
 }
+
 .form-input ::placeholder {
   font-size: 12px;
   line-height: 2;
@@ -1088,15 +1088,19 @@ img {
   height: 24px;
   margin-left: 16px;
 }
-.form-box{}
+.form-box {
+  width: 100%;
+}
 .footer-subscribe .form-title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
+.form-all {
+  display: block;
+}
 @media screen and (min-width: 768px) {
   .footer-container {
-    width: 552px;
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -1104,27 +1108,36 @@ img {
     align-items: start;
     flex-wrap: wrap;
   }
-  .footer-subscribe .form-title {justify-content: flex-start;}
+  .form-box {
+    display: flex;
+  }
+  .footer-subscribe .form-title {
+    justify-content: flex-start;
+  }
   .footer-recommendation {
     align-items: start;
   }
   .footer-social {
     align-items: start;
   }
-}
-.footer-recommendation {
-  margin-right: 24px;
+  .footer-recommendation {
+    margin-right: 24px;
+  }
+  .form-input {
+    width: 264px;
+    margin-right: 24px;
+    margin-bottom: 0;
+  }
+  .form-all {
+    display: flex;
+  }
 }
 
-.form-all {
-  display: flex;
+@media screen and (min-width: 768px) and (max-width: 1158px) {
+  .footer-container {
+    width: 552px;
+  }
 }
-.form-input {
-  width: 264px;
-  margin-bottom: 0px;
-  margin-right: 24px;
-}
-
 @media screen and (min-width: 1158px) {
   .footer-container {
     flex-wrap: nowrap;
