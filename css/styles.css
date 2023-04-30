@@ -639,6 +639,7 @@ img {
   .doing-section {
     display: block;
     padding-bottom: 120px;
+    padding-top: 0;
   }
 }
 /*=========================== TEAM ============================*/
